@@ -11,6 +11,7 @@ import SwiftUI
 struct ContentView: View {
     
     @State var show = false
+    @State var viewState = CGSize.zero
     
     var body: some View {
         ZStack {
@@ -34,27 +35,43 @@ struct ContentView: View {
                 .blendMode(.hardLight)
                 .animation(.linear(duration: 0.5))
                 .animation(.easeInOut)
+                .offset(x: viewState.width, y: viewState.height)
             
             CardView()
-                .background(show ? Color.red : Color("background8"))
+                .background(show ? Color("background5") : Color("background8"))
                 .cornerRadius(10)
                 .shadow(radius: 20)
                 .offset(x: 0, y: show ? -200 : -20)
                 .scaleEffect(0.90)
                 .rotationEffect(Angle(degrees: show ? 10 : 0))
-//                .rotation3DEffect(Angle(degrees: show ? 40 : 0), axis: /*@START_MENU_TOKEN@*/(x: 10.0, y: 10.0, z: 10.0)/*@END_MENU_TOKEN@*/)
+                //                .rotation3DEffect(Angle(degrees: show ? 40 : 0), axis: /*@START_MENU_TOKEN@*/(x: 10.0, y: 10.0, z: 10.0)/*@END_MENU_TOKEN@*/)
                 .blendMode(.hardLight)
                 .animation(.linear(duration: 0.5))
                 .animation(.easeInOut)
+                .offset(x: viewState.width, y: viewState.height)
             
             CertificateView()
+                .offset(x: viewState.width, y: viewState.height)
                 .scaleEffect(0.95)
                 .rotationEffect(Angle(degrees: show ? 5 : 0))
                 .rotation3DEffect(Angle(degrees: show ? 30 : 0), axis: /*@START_MENU_TOKEN@*/(x: 10.0, y: 10.0, z: 10.0)/*@END_MENU_TOKEN@*/)
                 .animation(.interpolatingSpring(mass: 1, stiffness: 100, damping: 10, initialVelocity: 0))
                 .onTapGesture {
                     self.show.toggle()
+            }
+            .gesture(
+                DragGesture()
+                    .onChanged{ value in
+                        self.viewState = value.translation
+                        self.show = true
+                        
                 }
+                
+                .onEnded{ value in
+                    self.viewState = CGSize.zero
+                    self.show = false
+                }
+            )
             
         }
     }
