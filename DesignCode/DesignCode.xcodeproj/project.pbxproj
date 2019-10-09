@@ -14,6 +14,7 @@
 		56A7401D23478427002221BB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56A7401C23478427002221BB /* Preview Assets.xcassets */; };
 		56A7402023478427002221BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56A7401E23478427002221BB /* LaunchScreen.storyboard */; };
 		56B03FA0234E0016000FE852 /* HomeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B03F9F234E0016000FE852 /* HomeList.swift */; };
+		56B2A0E4234E5C24009FF5B5 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B2A0E3234E5C24009FF5B5 /* BlurView.swift */; };
 		964EDC382349600E000C72F1 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964EDC372349600E000C72F1 /* Home.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		56A7401F23478427002221BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		56A7402123478427002221BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56B03F9F234E0016000FE852 /* HomeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeList.swift; sourceTree = "<group>"; };
+		56B2A0E3234E5C24009FF5B5 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		964EDC372349600E000C72F1 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,6 +67,7 @@
 				56A7401723478426002221BB /* ContentView.swift */,
 				964EDC372349600E000C72F1 /* Home.swift */,
 				56B03F9F234E0016000FE852 /* HomeList.swift */,
+				56B2A0E3234E5C24009FF5B5 /* BlurView.swift */,
 				56A7401923478427002221BB /* Assets.xcassets */,
 				56A7401E23478427002221BB /* LaunchScreen.storyboard */,
 				56A7402123478427002221BB /* Info.plist */,
@@ -157,6 +160,7 @@
 				56A7401623478426002221BB /* SceneDelegate.swift in Sources */,
 				964EDC382349600E000C72F1 /* Home.swift in Sources */,
 				56A7401823478426002221BB /* ContentView.swift in Sources */,
+				56B2A0E4234E5C24009FF5B5 /* BlurView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,6 +15,13 @@ struct Home: View {
     
     var body: some View {
         ZStack {
+            
+            HomeList()
+                .blur(radius: show ? 20 : 0)
+                .scaleEffect(showProfile ? 0.95 : 1)
+                .animation(.default)
+                
+            
             ContentView()
                 .background(Color.white)
                 .cornerRadius(30)
