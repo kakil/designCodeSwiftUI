@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		566ECAE32350C2CE0062C1B1 /* UpdateList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566ECAE22350C2CE0062C1B1 /* UpdateList.swift */; };
 		56A7401423478426002221BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A7401323478426002221BB /* AppDelegate.swift */; };
 		56A7401623478426002221BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A7401523478426002221BB /* SceneDelegate.swift */; };
 		56A7401823478426002221BB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A7401723478426002221BB /* ContentView.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		566ECAE22350C2CE0062C1B1 /* UpdateList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateList.swift; sourceTree = "<group>"; };
 		56A7401023478426002221BB /* DesignCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56A7401323478426002221BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56A7401523478426002221BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				56A7401523478426002221BB /* SceneDelegate.swift */,
 				56A7401723478426002221BB /* ContentView.swift */,
 				964EDC372349600E000C72F1 /* Home.swift */,
+				566ECAE22350C2CE0062C1B1 /* UpdateList.swift */,
 				56B03F9F234E0016000FE852 /* HomeList.swift */,
 				56B2A0E3234E5C24009FF5B5 /* BlurView.swift */,
 				56A7401923478427002221BB /* Assets.xcassets */,
@@ -156,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				56A7401423478426002221BB /* AppDelegate.swift in Sources */,
+				566ECAE32350C2CE0062C1B1 /* UpdateList.swift in Sources */,
 				56B03FA0234E0016000FE852 /* HomeList.swift in Sources */,
 				56A7401623478426002221BB /* SceneDelegate.swift in Sources */,
 				964EDC382349600E000C72F1 /* Home.swift in Sources */,
