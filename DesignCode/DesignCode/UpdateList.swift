@@ -10,7 +10,7 @@ import SwiftUI
 
 struct UpdateList: View {
     
-    @State var show = false
+    @State var showSettings = false
     var updates = updateData
     
     var body: some View {
@@ -20,17 +20,28 @@ struct UpdateList: View {
                     VStack(alignment: .leading) {
                         Text(item.title)
                             .font(.headline)
+                        
                         Text(item.text)
                             .lineLimit(2)
+                            .font(.system(size: 15))
+                            .lineSpacing(4)
+                            .frame(height: 50)
+                        
                         Text(item.date)
+                            .font(.caption)
+                            .fontWeight(.bold)
+                            .foregroundColor(.gray)
                     }
                     
                 }
             }
             .navigationBarTitle(Text("Updates"))
         .navigationBarItems(trailing:
-            Button(action: { self.show.toggle() }) {
+            Button(action: { self.showSettings.toggle() }) {
                 Image(systemName: "gear")
+                    .sheet(isPresented: self.$showSettings, content: {
+                        Text("Settings")
+                    })
             }
             
         )
