@@ -31,11 +31,13 @@ struct CertificateRow : View {
     }
 }
 
+#if DEBUG
 struct CertificateRow_Previews: PreviewProvider {
     static var previews: some View {
         CertificateRow()
     }
 }
+#endif
 
 struct Certificate: Identifiable {
     var id = UUID()
