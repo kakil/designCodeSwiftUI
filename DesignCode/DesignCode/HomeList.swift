@@ -14,43 +14,55 @@ struct HomeList: View {
     var courses = coursesData
     
     var body: some View {
-        VStack {
-            HStack {
-                VStack (alignment: .leading){
-                    Text("Courses")
-                        .font(.largeTitle)
-                        .fontWeight(.heavy)
-                    Text("22 courses")
-                        .foregroundColor(.gray)
-                }
-                Spacer()
-            }
-            .padding(.leading, 70)
-            .padding(.bottom, 40)
-            
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack (spacing: 30){
-                    ForEach(courses) { item in
-                        Button(action: { self.showingContent.toggle() }) {
-                           CourseView(
-                            title: item.title,
-                            image: item.image,
-                            color: item.color,
-                            shadowColor: item.shadowColor
-                           )
-                            .sheet(isPresented: self.$showingContent, content: {
-                                CourseView()
-                            })
-                        }
-                        
-                        
+        ScrollView {
+            VStack {
+                HStack {
+                    VStack (alignment: .leading){
+                        Text("Courses")
+                            .font(.largeTitle)
+                            .fontWeight(.heavy)
+                        Text("22 courses")
+                            .foregroundColor(.gray)
                     }
+                    Spacer()
                 }
-                .padding(.leading, 40)
-                Spacer()
+                .padding(.leading, 70)
+                
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack (spacing: 30){
+                        ForEach(courses) { item in
+                            Button(action: { self.showingContent.toggle() }) {
+                                GeometryReader { geometry in
+                                    CourseView(
+                                        title: item.title,
+                                        image: item.image,
+                                        color: item.color,
+                                        shadowColor: item.shadowColor
+                                    )
+                                        .rotation3DEffect(Angle(degrees:
+                                            Double(geometry.frame(in: .global).minX - 40) / -20
+                                        ), axis: (x: 0, y: 10, z: 0))
+                                    .sheet(isPresented: self.$showingContent, content: {
+                                        CourseView()
+                                    })
+                                    
+                                }
+                                .frame(width: 246, height: 150)
+                            }
+                            
+                            
+                        }
+                    }
+                    .padding(.leading, 40)
+                    .padding(.top, 30)
+                    Spacer()
+                }
+                .frame(height: 450)
+                
+                CertificateRow()
             }
+            .padding(.top, 78.0)
         }
-        .padding(.top, 78.0)
     }
 }
 
@@ -68,7 +80,7 @@ struct CourseView: View {
     var shadowColor = Color("backgroundShadow3")
     
     var body: some View {
-        return VStack(alignment: .leading, spacing: 0.0) {
+        return VStack(alignment: .leading) {
             Text(title)
                 .font(.title)
                 .fontWeight(.bold)
@@ -109,5 +121,17 @@ let coursesData = [
            image: "Illustration2",
            color: Color("background4"),
            shadowColor: Color("backgroundShadow4")
-    )
+    ),
+    Course(title: "Swift UI Advanced",
+           image: "Illustration3",
+           color: Color("background7"),
+           shadowColor: Color(hue: 0.677, saturation: 0.701, brightness: 0.788, opacity: 0.5)),
+    Course(title: "Framer Playground",
+           image: "Illustration4",
+           color: Color("background8"),
+           shadowColor: Color(hue: 0.677, saturation: 0.701, brightness: 0.788, opacity: 0.5)),
+    Course(title: "Flutter for Designers",
+           image: "Illustration5",
+           color: Color("background9"),
+           shadowColor: Color(hue: 0.677, saturation: 0.701, brightness: 0.788, opacity: 0.5)),
 ]
