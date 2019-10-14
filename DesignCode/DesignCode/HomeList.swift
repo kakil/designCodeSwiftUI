@@ -11,7 +11,6 @@ import SwiftUI
 struct HomeList: View {
     
     @State var showingContent = false
-    
     var courses = coursesData
     
     var body: some View {
@@ -32,17 +31,23 @@ struct HomeList: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack (spacing: 30){
                     ForEach(courses) { item in
-                        
-                        CourseView(title: item.title, image: item.image, color: item.color, shadowColor: item.shadowColor)
+                        Button(action: { self.showingContent.toggle() }) {
+                           CourseView(
+                            title: item.title,
+                            image: item.image,
+                            color: item.color,
+                            shadowColor: item.shadowColor
+                           )
                             .sheet(isPresented: self.$showingContent, content: {
                                 CourseView()
-                            }).onTapGesture {
-                                self.showingContent.toggle()
+                            })
                         }
+                        
                         
                     }
                 }
                 .padding(.leading, 40)
+                Spacer()
             }
         }
         .padding(.top, 78.0)

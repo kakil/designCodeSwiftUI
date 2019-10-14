@@ -16,7 +16,7 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             
-            BlurView(style: .extraLight)
+            BlurView(style: .systemMaterial)
             
             TitleView()
                 .blur(radius: show ? 20 : 0)
@@ -35,8 +35,7 @@ struct ContentView: View {
                 .rotationEffect(Angle(degrees: show ? 15 : 0))
 //                .rotation3DEffect(Angle(degrees: show ? 50 : 0), axis: /*@START_MENU_TOKEN@*/(x: 10.0, y: 10.0, z: 10.0)/*@END_MENU_TOKEN@*/)
                 .blendMode(.hardLight)
-                .animation(.linear(duration: 0.5))
-                .animation(.easeInOut)
+                .animation(.easeInOut(duration: 0.6))
                 .offset(x: viewState.width, y: viewState.height)
             
             CardView()
@@ -48,16 +47,15 @@ struct ContentView: View {
                 .rotationEffect(Angle(degrees: show ? 10 : 0))
                 //                .rotation3DEffect(Angle(degrees: show ? 40 : 0), axis: /*@START_MENU_TOKEN@*/(x: 10.0, y: 10.0, z: 10.0)/*@END_MENU_TOKEN@*/)
                 .blendMode(.hardLight)
-                .animation(.linear(duration: 0.5))
-                .animation(.easeInOut)
+                .animation(.easeInOut(duration: 0.4))
                 .offset(x: viewState.width, y: viewState.height)
             
             CertificateView()
                 .offset(x: viewState.width, y: viewState.height)
                 .scaleEffect(0.95)
                 .rotationEffect(Angle(degrees: show ? 5 : 0))
-                .rotation3DEffect(Angle(degrees: show ? 30 : 0), axis: /*@START_MENU_TOKEN@*/(x: 10.0, y: 10.0, z: 10.0)/*@END_MENU_TOKEN@*/)
-                .animation(.interpolatingSpring(mass: 1, stiffness: 100, damping: 10, initialVelocity: 0))
+//                .rotation3DEffect(Angle(degrees: show ? 30 : 0), axis: /*@START_MENU_TOKEN@*/(x: 10.0, y: 10.0, z: 10.0)/*@END_MENU_TOKEN@*/)
+                .animation(.spring())
                 .onTapGesture {
                     self.show.toggle()
             }
@@ -141,18 +139,19 @@ struct TitleView: View {
 
 struct CardBottomView: View {
     var body: some View {
-        VStack(spacing: 20.0) {
+        return VStack(spacing: 20.0) {
             Rectangle()
                 .frame(width: 60, height: 6)
                 .cornerRadius(3.0)
                 .opacity(0.1)
             Text("This certificate is proof that Meng To has achieved the UI Design course with approval from Design+Code instructor.")
                 .lineLimit(10)
+            Spacer()
         }
         .frame(minWidth: 0, maxWidth: .infinity)
         .padding()
         .padding(.horizontal)
-        .background(Color.white)
+        .background(BlurView(style: .systemMaterial))
         .cornerRadius(30)
         .shadow(radius: 20)
         .offset(y:600.0)
