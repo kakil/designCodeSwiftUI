@@ -12,26 +12,20 @@ struct TabBar: View {
     var body: some View {
         TabView {
             Home().tabItem({
-                VStack {
-                    Image("IconHome")
-                    Text("Home")
-                }
+                Image("IconHome")
+                Text("Home")
                 
             }).tag(1)
             
             ContentView().tabItem({
-                VStack {
-                    Image("IconCards")
-                    Text("Certificates")
-                }
+                Image("IconCards")
+                Text("Certificates")
                 
             }).tag(2)
             
-            UpdateList().tabItem({
-                VStack {
-                    Image("IconSettings")
-                    Text("Updates")
-                }
+            Settings().tabItem({
+                Image("IconSettings")
+                Text("Settings")
                 
             }).tag(3)
         }

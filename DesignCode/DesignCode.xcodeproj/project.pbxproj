@@ -17,6 +17,7 @@
 		56B03FA0234E0016000FE852 /* HomeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B03F9F234E0016000FE852 /* HomeList.swift */; };
 		56B2A0E4234E5C24009FF5B5 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B2A0E3234E5C24009FF5B5 /* BlurView.swift */; };
 		56CC2B182354937400ED5521 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CC2B172354937400ED5521 /* TabBar.swift */; };
+		56CC2B1A2354B2B500ED5521 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CC2B192354B2B500ED5521 /* Settings.swift */; };
 		964EDC382349600E000C72F1 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964EDC372349600E000C72F1 /* Home.swift */; };
 		96B1D0EA2353EA93003C3A88 /* UpdateDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B1D0E92353EA93003C3A88 /* UpdateDetail.swift */; };
 		96B1D0EC2353EE14003C3A88 /* UpdateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B1D0EB2353EE14003C3A88 /* UpdateStore.swift */; };
@@ -35,6 +36,7 @@
 		56B03F9F234E0016000FE852 /* HomeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeList.swift; sourceTree = "<group>"; };
 		56B2A0E3234E5C24009FF5B5 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		56CC2B172354937400ED5521 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		56CC2B192354B2B500ED5521 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		964EDC372349600E000C72F1 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		96B1D0E92353EA93003C3A88 /* UpdateDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateDetail.swift; sourceTree = "<group>"; };
 		96B1D0EB2353EE14003C3A88 /* UpdateStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateStore.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				566ECAE22350C2CE0062C1B1 /* UpdateList.swift */,
 				96B1D0E92353EA93003C3A88 /* UpdateDetail.swift */,
 				96B1D0EB2353EE14003C3A88 /* UpdateStore.swift */,
+				56CC2B192354B2B500ED5521 /* Settings.swift */,
 				56B2A0E3234E5C24009FF5B5 /* BlurView.swift */,
 				56A7401923478427002221BB /* Assets.xcassets */,
 				56A7401E23478427002221BB /* LaunchScreen.storyboard */,
@@ -176,6 +179,7 @@
 				964EDC382349600E000C72F1 /* Home.swift in Sources */,
 				56A7401823478426002221BB /* ContentView.swift in Sources */,
 				56B2A0E4234E5C24009FF5B5 /* BlurView.swift in Sources */,
+				56CC2B1A2354B2B500ED5521 /* Settings.swift in Sources */,
 				56CC2B182354937400ED5521 /* TabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
