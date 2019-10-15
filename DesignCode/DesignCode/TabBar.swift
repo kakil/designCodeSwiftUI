@@ -29,6 +29,7 @@ struct TabBar: View {
                 
             }).tag(3)
         }
+        .edgesIgnoringSafeArea(.top)
     }
 }
 

@@ -116,7 +116,7 @@ struct CertificateView: View {
             Spacer()
             Image("Background")
         }
-        .frame(width: 340.0, height: 220.0)
+        .frame(width: CGFloat(item.width), height: CGFloat(item.height))
         .background(Color.black)
         .cornerRadius(10)
         .shadow(radius: 20)
@@ -156,6 +156,6 @@ struct CardBottomView: View {
         .background(BlurView(style: .systemMaterial))
         .cornerRadius(30)
         .shadow(radius: 20)
-        .offset(y:600.0)
+        .offset(y: UIScreen.main.bounds.height-170)
     }
 }

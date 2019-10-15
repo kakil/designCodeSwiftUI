@@ -24,8 +24,8 @@ struct CertificateRow : View {
                         CertificateView(item: item)
                     }
                 }
-                .padding(20)
-                .padding(.leading, 20)
+                .padding(10)
+                .padding(.leading, 30)
         }
     }
     }
